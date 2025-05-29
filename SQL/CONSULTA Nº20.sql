@@ -2,8 +2,7 @@
 duración superior a 110 minutos
 */
 select 
-  "name" as Categoria, ROUND(AVG("length"), 2) as "Promedio_duración_película",
- 
+  c. "name" as Categoria, ROUND(AVG("length"), 2) as "Promedio_duración_película",
 from 
   "film" f
 join 
@@ -11,6 +10,6 @@ join
 join 
   "category" c on fc. "category_id" = c. "category_id"
 group by c."name"
-having AVG("length") > 110;
+having AVG("length") > 110 ;
 
   
