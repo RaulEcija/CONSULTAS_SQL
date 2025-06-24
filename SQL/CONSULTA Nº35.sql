@@ -1,8 +1,9 @@
  -- Actores cuyo primer nombre es 'Johnny'
  
 select 
-   "customer_id", 
-   CONCAT("first_name", ' ', "last_name") as "actor"
-from "customer"
+   "actor_id", 
+   CONCAT("first_name", ' ', "last_name") as "Actor_buscado"
+from "actor"
 where "first_name" = 'JOHNNY'
-order by "customer_id" asc ; -- Lo dejo ordenaado porque previamente no sabía que solo hubiera un actor con el nombre indicado
+order by "actor_id" asc ; -- Lo dejo ordenado de id más bajo a más alto.
+
